@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1086578985823",
+    "project_id": "loginmvvm-4af3a",
+    "storage_bucket": "loginmvvm-4af3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086578985823:android:2589c1f0ae17aa5dde04ea",
+        "android_client_info": {
+          "package_name": "com.example.diseologin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086578985823-c7cnp9d3fgd9p6b0caf8lmrp0ojldlqp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdQE7xB_TzGtHapeN_GWfb147Q6wzZiYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086578985823-c7cnp9d3fgd9p6b0caf8lmrp0ojldlqp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

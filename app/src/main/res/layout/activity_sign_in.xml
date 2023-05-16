@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    tools:context=".SignInActivity">
+    tools:context=".mvvm_sign_in.view.SignInActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/normal_margin"
+    android:paddingEnd="@dimen/normal_margin"
+    tools:context=".mvvm_sign_in.view.SignInActivity">
 
     <TextView
         android:id="@+id/textViewSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="@dimen/large_margin"
         android:fontFamily="sans-serif-medium"
         android:text="@string/textviewSignIn"
-        android:textSize="50sp"
-        android:textStyle="bold"
         android:textColor="@color/textViewSingIn"
+        android:textSize="@dimen/title"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,8 +34,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:text="@string/textviewSignUp"
-        android:textSize="50sp"
         android:textColor="@color/textViewSingUp"
+        android:textSize="@dimen/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSignIn" />
 
@@ -37,11 +44,11 @@
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="@dimen/large_margin"
         android:background="@drawable/esquina_redondeada_edit_text_login"
-        android:inputType="textEmailAddress"
         android:hint="@string/editTextEmail"
-        android:padding="10dp"
+        android:inputType="textEmailAddress"
+        android:padding="@dimen/padding"
         android:textColorHint="@color/textViewSingUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,51 +58,57 @@
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
         android:background="@drawable/esquina_redondeada_edit_text_login"
         android:hint="@string/editTextPassword"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
+        android:inputType="textPassword"
+        android:padding="@dimen/padding"
         android:textColorHint="@color/textViewSingUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
-    <TextView
+    <Button
         android:id="@+id/txtForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/textForgotPassword"
+        android:layout_marginTop="@dimen/normal_margin"
         android:clickable="true"
-        android:foreground="?selectableItemBackground"
+        android:focusable="true"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="@string/textForgotPassword"
+        android:textAllCaps="false"
         android:textColor="@color/textViewSingIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSignIn"
-        android:layout_width="300dp"
+        android:layout_width="@dimen/layout_width_button"
         android:layout_height="wrap_content"
-        android:text="@string/textButton"
-        android:layout_marginTop="40dp"
-        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/medium_margin"
         android:background="@drawable/btn_login"
+        android:text="@string/textButton"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtForgotPassword" />
 
-    <TextView
+    <Button
+        android:id="@+id/btnPrivacyPoliticSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:clickable="true"
+        android:focusable="true"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:text="@string/textPrivacy"
+        android:textAllCaps="false"
         android:textColor="@color/textViewSingIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:clickable="true"
-        android:foreground="?selectableItemBackground"
         app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
