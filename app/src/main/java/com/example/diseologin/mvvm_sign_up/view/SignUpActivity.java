@@ -56,7 +56,8 @@ public class SignUpActivity extends BaseActivity<ActivitySignUpBinding, SignUpVi
         binding.textViewSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SignUpActivity.this, SignInActivity.class));
+                //startActivity(new Intent(SignUpActivity.this, SignInActivity.class));
+                onBackPressed();
 
             }
         });
